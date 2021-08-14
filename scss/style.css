@@ -1,0 +1,596 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+button,
+input {
+    font-family: -apple-system, Ubuntu, Arial, sans-serif;
+}
+
+*,
+li {
+    list-style: none;
+}
+
+.animate-before {
+    transform: translateY(100px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.animate-after {
+    transform: translateY(-100px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 28px 15px 24px;
+}
+
+header h3 {
+    color: #ff9a9e;
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 2.5rem;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    padding: 16px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #111;
+    font-weight: 800;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header nav .buttons {
+    display: flex;
+    margin-left: 24px;
+}
+
+header nav .buttons button {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 11px 12px;
+    border-radius: 24px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+header nav .buttons .login {
+    color: #fff;
+    background: #ff9a9e;
+}
+
+header nav .buttons .signup {
+    margin-left: 16px;
+    background: #efefef;
+}
+
+header nav .buttons #myModal .modal-body .close {
+    z-index: 1;
+    margin-top: -7rem;
+    width: 50px;
+    position: absolute;
+    left: 38rem;
+    color: black;
+    font-size: 34px;
+    background-color: white;
+}
+
+header nav .buttons #myModal .modal-body img {
+    position: absolute;
+    width: 60px;
+    top: 2rem;
+    left: 20rem;
+}
+
+header nav .buttons #myModal .modal-content {
+    top: 10%;
+    border-radius: 44px;
+    margin-top: 5%;
+    width: 450px;
+    height: 665px;
+    overflow-y: hidden;
+}
+
+header nav .buttons #myModal {
+    overflow-y: hidden;
+}
+
+header nav .buttons #myModal .modal-body {
+    position: relative;
+    padding: 90px;
+}
+
+header nav .buttons #myModal .modal-body .text-form {
+    position: fixed;
+    left: 3%;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+header nav .buttons #myModal .modal-body .input {
+    left: -6.5rem;
+    position: inherit;
+    margin-top: 10rem;
+}
+
+header nav .buttons #myModal .modal-body input {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 6.5rem;
+    width: 279px;
+    border-radius: 20px;
+    height: 44px;
+    border: none;
+    background-color: #E8F0FE;
+}
+
+header nav .buttons #myModal .modal-body input[type=text] {
+    padding-left: 10px;
+}
+
+header nav .buttons #myModal .modal-body input[type=password] {
+    padding-left: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+header nav .buttons #myModal .modal-body #password_signin {
+    margin-top: 0.5rem;
+}
+
+header nav .buttons #myModal .modal-body #email_signin {
+    margin-top: 5rem;
+}
+
+header nav .buttons #myModal .modal-body a {
+    font-weight: 600;
+    left: 25rem;
+    position: fixed;
+    margin-top: 0.5rem;
+    color: grey;
+}
+
+header nav .buttons #myModal .modal-body button {
+    margin-left: 0rem;
+    margin-top: 3.5rem;
+    width: 27.5rem;
+    background-color: #ff9a9e;
+    color: white;
+}
+
+header nav .buttons #myModal .modal-body span {
+    left: 21rem;
+    position: absolute;
+    top: 87%;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/*modal signup */
+
+header nav .buttons #myModa-signup .modal-body .close {
+    margin-top: -9rem;
+    width: 50px;
+    position: absolute;
+    left: 34rem;
+    color: black;
+    font-size: 34px;
+    left: 35rem;
+    background-color: white;
+}
+
+header nav .buttons #myModa-signup .modal-body span {
+    font-size: 44px;
+    top: 11rem;
+    left: 17rem;
+    font-weight: 900;
+    color: #FF9A9E;
+    position: absolute;
+}
+
+header nav .buttons #myModa-signup .modal-content {
+    top: 10%;
+    border-radius: 44px;
+    margin-top: 5%;
+    width: 475px;
+    height: 760px;
+    overflow-y: hidden;
+}
+
+header nav .buttons #myModa-signup .modal-body {
+    position: relative;
+    padding: 90px;
+}
+
+header nav .buttons #myModa-signup .modal-body .text-form {
+    position: fixed;
+    left: 3%;
+    font-size: 36px;
+    font-weight: 700;
+    top: 6rem;
+}
+
+header nav .buttons #myModa-signup .modal-body .input {
+    left: -6.5rem;
+    position: inherit;
+    margin-top: 10rem;
+}
+
+header nav .buttons #myModa-signup .modal-body .input {
+    left: -6.5rem;
+    position: inherit;
+    margin-top: 10rem;
+}
+
+header nav .buttons #myModa-signup .modal-body #female {
+    margin-top: -37.4px;
+    position: absolute;
+    /* margin-left: 12rem; */
+    left: 8rem;
+    width: 15px;
+}
+
+header nav .buttons #myModa-signup .modal-body #male {
+    margin-top: 0rem;
+    position: absolute;
+    left: 0rem;
+    width: 15px;
+}
+
+header nav .buttons #myModa-signup .modal-body input[type="date"] {
+    padding: 1rem;
+}
+
+header nav .buttons #myModa-signup .modal-body input {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 6.5rem;
+    width: 303px;
+    border-radius: 20px;
+    height: 44px;
+    border: none;
+    background-color: #E8F0FE;
+}
+
+header nav .buttons #myModa-signup .modal-body input[type=text] {
+    padding-left: 10px;
+}
+
+header nav .buttons #myModa-signup .modal-body input[type=password] {
+    padding-left: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+header nav .buttons #myModa-signup .modal-body #password {
+    margin-top: 1rem;
+}
+
+header nav .buttons #myModa-signup .modal-body #first_name {
+    text-transform: capitalize;
+}
+
+header nav .buttons #myModa-signup .modal-body #last_name {
+    text-transform: capitalize;
+}
+
+header nav .buttons #myModa-signup .modal-body #emailMsg {
+    position: unset;
+    top: 24.9rem;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 7rem;
+}
+
+header nav .buttons #myModa-signup .modal-body button {
+    margin-left: 6rem;
+    margin-top: 2rem;
+    width: 305px;
+    background-color: #ff9a9e;
+    color: white;
+}
+
+.error {
+    color: #FF9A9E;
+    margin-top: 0rem;
+    margin-left: 7rem;
+}
+
+.heading {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.heading .text {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.heading .wrapper {
+    font-weight: 700;
+    position: relative;
+}
+
+.heading .wrapper .offset {
+    position: absolute;
+    top: 7px;
+    left: -3px;
+    transform: translateX(-50%);
+}
+
+.heading .wrapper .text {
+    white-space: nowrap;
+    color: #e60023;
+    transition-duration: 1s;
+}
+
+.heading .wrapper .scroll {
+    display: contents;
+}
+
+.heading .wrapper .scroll svg {
+    z-index: 3;
+    height: 50px;
+    width: 50px;
+    border-radius: 28px;
+    position: absolute;
+    margin-top: 42rem;
+    left: -3rem;
+    opacity: 0.6;
+    border: none;
+    animation: suspension 1.5s ease-in-out infinite;
+}
+
+.heading .wrapper .up-scroll {
+    display: contents;
+}
+
+.heading .wrapper .up-scroll svg {
+    z-index: 3;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    position: absolute;
+    opacity: 0.8;
+    border: none;
+    margin-top: 60rem;
+    left: -24px;
+    animation: suspension 1.5s ease-in-out infinite;
+}
+
+@keyframes suspension {
+    100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    0% {
+        transform: translateY(-10px);
+    }
+}
+
+html {
+    overflow-y: hidden;
+}
+
+.background-bottom {
+    z-index: 1;
+    height: 1230px;
+    max-height: 150%;
+    opacity: 0.4;
+    width: 100%;
+    position: absolute;
+    margin-top: 56rem;
+    background-image: linear-gradient(to top, #e8198b 0%, #c7eafd 100%);
+}
+
+.bottom span {
+    position: absolute;
+    margin-top: 67rem;
+    z-index: 3;
+    left: 6%;
+    font-size: 62px;
+    color: currentcolor;
+    font-weight: 700;
+}
+
+.bottom .login {
+    z-index: 4;
+    left: 107rem;
+    top: 89rem;
+    position: absolute;
+    color: white;
+    height: 700px;
+    width: 347px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.gradient,
+.grid-container {}
+
+.gradient {
+    z-index: 2;
+}
+
+.grid-container {
+    z-index: 1;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 252px);
+    max-height: 0px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.grid.active {
+    max-height: unset;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s;
+}
+
+.column:nth-child(1) {
+    margin-top: 0;
+    transition-delay: 0s;
+}
+
+.column:nth-child(2) {
+    margin-top: 160px;
+    transition-delay: 0.2s;
+}
+
+.column:nth-child(3) {
+    margin-top: 320px;
+    transition-delay: 0.4s;
+}
+
+.column:nth-child(4) {
+    margin-top: 400px;
+    transition-delay: 0.6s;
+}
+
+.column:nth-child(5) {
+    margin-top: 320px;
+    transition-delay: 0.8s;
+}
+
+.column:nth-child(6) {
+    margin-top: 160px;
+    transition-delay: 1s;
+}
+
+.column:nth-child(7) {
+    margin-top: 0;
+    transition-delay: 1.2s;
+}
+
+.item {
+    width: 236px;
+    height: 318px;
+    background: #e60023;
+    border-radius: 17px;
+}
+
+@media (max-width: 1024px) {
+    .item {
+        background: #493b3d;
+    }
+}
+
+.item:not(:first-child) {
+    border-radius: 17px;
+    margin-top: 16px;
+}
+
+.item img {
+    width: 236px;
+    height: 318px;
+    border-radius: 17px;
+}
+
+.bottom .login_bottom .input {
+    margin-top: 20rem;
+    margin-left: 5rem;
+}
+
+.bottom .login_bottom .input input {
+    border: none;
+    border-radius: 24px;
+    background-color: aliceblue;
+    width: 253px;
+    height: 50px;
+    padding: 10px;
+}
+
+.bottom .login_bottom a {
+    margin-top: 20rem;
+    margin-left: 14rem;
+}
+
+.bottom .login_bottom .error {
+    margin-left: 0rem;
+}
+
+.bottom .login_bottom .wel_top {
+    position: absolute;
+    top: 6rem;
+    font-size: 23px;
+    font-weight: 600;
+    left: 4rem;
+}
+
+.bottom .login_bottom .wel_bot {
+    position: absolute;
+    top: 10rem;
+    left: 12rem;
+    font-size: 40px;
+    font-weight: 900;
+    color: rgb(255, 154, 158);
+}
+
+.bottom .login_bottom #signup_bottom {
+    position: inherit;
+    left: 4rem;
+    margin-top: 1rem;
+    font-size: 12px;
+    border: none;
+    background-color: white;
+}
+
+.bottom .login_bottom #response_bottom {
+    color: red;
+    font-weight: 600;
+    font-size: 12px;
+    position: fixed;
+    top: 221px;
+}
